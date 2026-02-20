@@ -211,35 +211,15 @@ await mcp.callTool('track_permission', {
 
 ### System Design
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     Kilo Code (IDE/CLI)                     │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
-│  │read_file │  │write_file│  │execute_  │  │use_mcp_  │   │
-│  │          │  │          │  │command   │  │tool      │   │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘   │
-└───────┼─────────────┼─────────────┼─────────────┼──────────┘
-        │             │             │             │
-        └─────────────┴─────────────┴─────────────┘
-                          │
-                          ▼
-        ┌─────────────────────────────────────┐
-        │      Kilo-Nod MCP Server            │
-        │  ┌───────────────────────────────┐  │
-        │  │  Permission Tracking          │  │
-        │  │  Audit Logging                │  │
-        │  │  Risk Analysis                │  │
-        │  │  Statistics Collection        │  │
-        │  └───────────────────────────────┘  │
-        └──────────┬──────────────────────────┘
-                   │
-                   ▼
-        ┌─────────────────────────────────────┐
-        │      Persistent Storage             │
-        │  ~/.kilo-nod/audit.jsonl            │
-        │  ~/.kilo-nod/stats.json             │
-        └─────────────────────────────────────┘
-```
+<div align="center">
+  <img src="architecture.svg" alt="Kilo-Nod Architecture" width="800"/>
+</div>
+
+### Data Flow
+
+<div align="center">
+  <img src="workflow.svg" alt="Processing Workflow" width="700"/>
+</div>
 
 ### Data Flow
 
@@ -251,6 +231,10 @@ await mcp.callTool('track_permission', {
 6. **Response**: Return tracking confirmation
 
 ### Risk Detection Algorithm
+
+<div align="center">
+  <img src="risk-levels.svg" alt="Risk Detection Levels" width="600"/>
+</div>
 
 ```javascript
 function detectRisk(tool, params) {
@@ -563,49 +547,9 @@ We welcome contributions from the community. Please read our contributing guidel
 - Provide detailed reproduction steps for bugs
 - Include system information (OS, Node version, Kilo Code version)
 
-## Security
-
-### Data Privacy
-
-- All data stored locally on your machine
-- No data transmitted to external servers
-- Audit logs encrypted at rest (optional)
-- Configurable data retention policies
-
-### Best Practices
-
-- Review audit logs regularly
-- Configure appropriate permission policies
-- Use team settings for consistent governance
-- Enable notifications for high-risk operations
-
-### Reporting Security Issues
-
-Please report security vulnerabilities to security@example.com. Do not open public issues for security concerns.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Built for the Kilo Developer Challenge
-- Inspired by claude-nod for UX patterns
-- Powered by the Model Context Protocol
-- Thanks to the Kilo Code team for excellent documentation
-
-## Resources
-
-- [Kilo Code Documentation](https://kilo.ai/docs)
-- [MCP Specification](https://modelcontextprotocol.io)
-- [GitHub Repository](https://github.com/Tasfia-17/kilonod)
-- [Issue Tracker](https://github.com/Tasfia-17/kilonod/issues)
-
-## Support
-
-- GitHub Issues: [Report bugs or request features](https://github.com/Tasfia-17/kilonod/issues)
-- Kilo Discord: [Join the community](https://kilo.ai/discord)
-- Email: support@example.com
 
 ---
 

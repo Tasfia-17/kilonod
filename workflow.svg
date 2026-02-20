@@ -1,0 +1,61 @@
+<svg width="700" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="250" fill="#0f172a"/>
+  
+  <!-- Step 1 -->
+  <rect x="30" y="80" width="120" height="90" rx="8" fill="#1e293b" stroke="url(#flow)" stroke-width="2"/>
+  <text x="90" y="110" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6366f1" font-weight="bold">1. Tool Call</text>
+  <text x="90" y="135" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">write_to_file</text>
+  <text x="90" y="155" text-anchor="middle" font-family="monospace" font-size="9" fill="#64748b">src/app.js</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 150 125 L 190 125" stroke="url(#flow)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#8b5cf6" />
+    </marker>
+  </defs>
+  
+  <!-- Step 2 -->
+  <rect x="190" y="80" width="120" height="90" rx="8" fill="#1e293b" stroke="url(#flow)" stroke-width="2"/>
+  <text x="250" y="110" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#8b5cf6" font-weight="bold">2. Analyze</text>
+  <text x="250" y="135" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Risk: Medium</text>
+  <text x="250" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Cost: 0.5</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 310 125 L 350 125" stroke="url(#flow)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Step 3 -->
+  <rect x="350" y="80" width="120" height="90" rx="8" fill="#1e293b" stroke="url(#flow)" stroke-width="2"/>
+  <text x="410" y="110" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a78bfa" font-weight="bold">3. Log</text>
+  <text x="410" y="135" text-anchor="middle" font-family="monospace" font-size="9" fill="#94a3b8">audit.jsonl</text>
+  <text x="410" y="155" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#64748b">+ timestamp</text>
+  
+  <!-- Arrow 3 -->
+  <path d="M 470 125 L 510 125" stroke="url(#flow)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Step 4 -->
+  <rect x="510" y="80" width="120" height="90" rx="8" fill="#1e293b" stroke="url(#flow)" stroke-width="2"/>
+  <text x="570" y="110" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#c4b5fd" font-weight="bold">4. Report</text>
+  <circle cx="555" cy="140" r="3" fill="#10b981"/>
+  <text x="565" y="143" font-family="sans-serif" font-size="9" fill="#94a3b8">Dashboard</text>
+  <circle cx="555" cy="158" r="3" fill="#10b981"/>
+  <text x="565" y="161" font-family="sans-serif" font-size="9" fill="#94a3b8">Analytics</text>
+  
+  <!-- Timeline -->
+  <line x1="30" y1="210" x2="630" y2="210" stroke="#334155" stroke-width="2"/>
+  <circle cx="90" cy="210" r="4" fill="#6366f1"/>
+  <circle cx="250" cy="210" r="4" fill="#8b5cf6"/>
+  <circle cx="410" cy="210" r="4" fill="#a78bfa"/>
+  <circle cx="570" cy="210" r="4" fill="#c4b5fd"/>
+  
+  <text x="350" y="235" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#64748b">Real-time Processing Pipeline</text>
+</svg>
