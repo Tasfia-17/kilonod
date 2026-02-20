@@ -1,0 +1,17 @@
+{
+  "name": "kilo-nod",
+  "version": "1.0.0",
+  "description": "Cross-platform permission overlay for Kilo Cloud Agents",
+  "scripts": {
+    "server": "node server/index.js",
+    "web": "cd web && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run web\"",
+    "mock": "node mock/kilo-mock.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
