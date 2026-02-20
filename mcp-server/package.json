@@ -1,0 +1,21 @@
+{
+  "name": "@kilocode/kilo-nod-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Kilo Code permission management and audit logging",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node --test"
+  },
+  "keywords": ["kilo", "mcp", "permissions", "audit", "logging"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
