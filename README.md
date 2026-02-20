@@ -42,6 +42,10 @@ Kilo-Nod integrates directly with Kilo Code via MCP to provide:
 
 ## Features
 
+<div align="center">
+  <img src="features.svg" alt="Core Features" width="800"/>
+</div>
+
 ### Core Capabilities
 
 **Permission Tracking**
@@ -67,6 +71,10 @@ Kilo-Nod integrates directly with Kilo Code via MCP to provide:
 - Session summaries
 
 ### MCP Integration
+
+<div align="center">
+  <img src="mcp-tools.svg" alt="MCP Tools and Resources" width="600"/>
+</div>
 
 **Tools Provided**
 
@@ -344,6 +352,10 @@ Configure team-wide settings in `config/team.json`:
 ```
 
 ## Use Cases
+
+<div align="center">
+  <img src="use-cases.svg" alt="Use Cases" width="700"/>
+</div>
 
 ### Individual Developers
 

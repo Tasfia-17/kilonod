@@ -1,0 +1,58 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="feat1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="feat2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="feat3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="feat4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="200" fill="#0f172a"/>
+  
+  <!-- Feature 1: Track -->
+  <circle cx="100" cy="100" r="60" fill="url(#feat1)" opacity="0.2"/>
+  <circle cx="100" cy="100" r="45" fill="none" stroke="url(#feat1)" stroke-width="3"/>
+  <path d="M 85 100 L 95 110 L 115 85" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="100" y="170" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6366f1" font-weight="bold">Track</text>
+  <text x="100" y="188" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">All Operations</text>
+  
+  <!-- Feature 2: Analyze -->
+  <circle cx="300" cy="100" r="60" fill="url(#feat2)" opacity="0.2"/>
+  <circle cx="300" cy="100" r="45" fill="none" stroke="url(#feat2)" stroke-width="3"/>
+  <circle cx="290" cy="95" r="8" fill="#fff"/>
+  <circle cx="310" cy="95" r="8" fill="#fff"/>
+  <path d="M 280 115 Q 300 125 320 115" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="300" y="170" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#10b981" font-weight="bold">Analyze</text>
+  <text x="300" y="188" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Risk Detection</text>
+  
+  <!-- Feature 3: Audit -->
+  <circle cx="500" cy="100" r="60" fill="url(#feat3)" opacity="0.2"/>
+  <circle cx="500" cy="100" r="45" fill="none" stroke="url(#feat3)" stroke-width="3"/>
+  <rect x="485" y="85" width="30" height="35" rx="2" fill="none" stroke="#fff" stroke-width="3"/>
+  <line x1="490" y1="95" x2="505" y2="95" stroke="#fff" stroke-width="2"/>
+  <line x1="490" y1="103" x2="510" y2="103" stroke="#fff" stroke-width="2"/>
+  <line x1="490" y1="111" x2="505" y2="111" stroke="#fff" stroke-width="2"/>
+  <text x="500" y="170" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#f59e0b" font-weight="bold">Audit</text>
+  <text x="500" y="188" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Complete Logs</text>
+  
+  <!-- Feature 4: Report -->
+  <circle cx="700" cy="100" r="60" fill="url(#feat4)" opacity="0.2"/>
+  <circle cx="700" cy="100" r="45" fill="none" stroke="url(#feat4)" stroke-width="3"/>
+  <rect x="680" y="90" width="15" height="25" fill="#fff"/>
+  <rect x="700" y="100" width="15" height="15" fill="#fff"/>
+  <rect x="680" y="70" width="15" height="15" fill="#fff"/>
+  <text x="700" y="170" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ef4444" font-weight="bold">Report</text>
+  <text x="700" y="188" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Analytics</text>
+</svg>
