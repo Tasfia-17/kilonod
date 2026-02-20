@@ -1,0 +1,15 @@
+<svg width="800" height="100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <text x="50" y="65" font-family="Arial, sans-serif" font-size="48" 
+        font-weight="bold" fill="url(#textGrad)">Kilo-Nod</text>
+  
+  <text x="50" y="90" font-family="Arial, sans-serif" font-size="14" 
+        fill="#64748b">Permission Oversight for Kilo Code</text>
+</svg>
