@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a0f;
+  --card-bg: rgba(20, 20, 30, 0.85);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: rgba(255, 255, 255, 0.95);
+  --text-dim: rgba(255, 255, 255, 0.5);
+  --accent: #6366f1;
+  --approve: #10b981;
+  --reject: #ef4444;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  gap: 20px;
+  padding: 12px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.connected {
+  background: var(--approve);
+  box-shadow: 0 0 8px var(--approve);
+}
+
+.dot.disconnected {
+  background: var(--reject);
+}
+
+.credits, .queue {
+  margin-left: auto;
+}
+
+/* Permission Card */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(40px);
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+  margin-bottom: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.icon {
+  font-size: 32px;
+}
+
+.info {
+  flex: 1;
+}
+
+.action {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.target {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin-top: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.risk {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+  padding: 16px 20px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.card-actions button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-approve {
+  background: var(--approve);
+  color: white;
+}
+
+.btn-approve:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-reject {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--reject);
+  border: 1px solid var(--reject);
+}
+
+.btn-reject:hover {
+  background: var(--reject);
+  color: white;
+}
+
+.auto-approve {
+  display: flex;
+  gap: 8px;
+  padding: 0 20px 20px;
+}
+
+.auto-approve button {
+  flex: 1;
+  padding: 8px;
+  background: rgba(99, 102, 241, 0.2);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.auto-approve button:hover {
+  background: var(--accent);
+  color: white;
+}
+
+kbd {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* History */
+.history {
+  margin-top: 30px;
+}
+
+.history h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--text-dim);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-item {
+  display: grid;
+  grid-template-columns: 80px 80px 1fr 80px;
+  gap: 12px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  font-size: 13px;
+  align-items: center;
+}
+
+.history-item .time {
+  color: var(--text-dim);
+}
+
+.history-item .action {
+  text-transform: capitalize;
+}
+
+.history-item .target {
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-item .decision {
+  text-align: right;
+  font-weight: 600;
+}
+
+.history-item.approve .decision {
+  color: var(--approve);
+}
+
+.history-item.deny .decision {
+  color: var(--reject);
+}
